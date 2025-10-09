@@ -26,7 +26,7 @@ public class Clickable : MonoBehaviour
 
     public void HandleClick(InteractionType type)
     {
-
+        Debug.Log("yeet");
     }
 }
 

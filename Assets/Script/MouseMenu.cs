@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class MouseMenu : MonoBehaviour
 {
@@ -53,6 +54,9 @@ public class MouseMenu : MonoBehaviour
             active = true;
             image.enabled = true;
             image.sprite = sprites[0];
+
+            transform.position = new Vector2(Mouse.current.position.ReadValue().x, Mouse.current.position.ReadValue().y);
+            Cursor.visible = false;
         }
         else if (Input.GetMouseButtonDown(1) && !active)
         {
@@ -61,9 +65,18 @@ public class MouseMenu : MonoBehaviour
             MouseInfo.SetActive(false);
         }
 
+        if (active) handleMouseMenu();
+
         if (active && Input.GetMouseButtonUp(0))
         {
-            
+            Cursor.visible = true;
         }
+
+
+    }
+
+    void handleMouseMenu()
+    {
+
     }
 }
