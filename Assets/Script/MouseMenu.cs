@@ -2,21 +2,30 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.InputSystem;
+using System;
 
 public class MouseMenu : MonoBehaviour
 {
     [SerializeField] private Sprite[] sprites;
     [SerializeField] private Image image;
-    [SerializeField] private GameObject MouseInfo;
-    [SerializeField] private TextMeshProUGUI ObjectName;
 
-    public bool blocked = false;
+    [SerializeField] private TextMeshProUGUI ObjectName;
+    [SerializeField] private GameObject MouseInfo;
+    [SerializeField] private RectTransform canvasRt;
+    [SerializeField] private GameObject InventoryContainer;
+    [SerializeField] private Inventory inventory;
+
+    public static bool blocked = false;
     public string currentHoveredObject = "";
+    [SerializeField] private float middleThreshold = 10;
 
     private int currentObjectId;
     private Clickable Obj;
     private bool available = false;
     private bool active = false;
+    private bool inventoryActive;
+    private int selectedOption = 0;
+    Vector2 initMousePosition;
 
     void Start()
     {
@@ -27,6 +36,7 @@ public class MouseMenu : MonoBehaviour
     public void MakeAvailable(int id, string label, Clickable reference)
     {
         if (blocked) return;
+        if (active) return;
         currentObjectId = id;
         currentHoveredObject = label;
         MouseInfo.SetActive(true);
@@ -45,7 +55,6 @@ public class MouseMenu : MonoBehaviour
         available = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!available && !active) return;
@@ -55,28 +64,85 @@ public class MouseMenu : MonoBehaviour
             image.enabled = true;
             image.sprite = sprites[0];
 
-            transform.position = new Vector2(Mouse.current.position.ReadValue().x, Mouse.current.position.ReadValue().y);
-            Cursor.visible = false;
+            //Cursor.visible = false;
+            Vector2 pos;
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRt, Input.mousePosition, Camera.main, out pos);
+            transform.localPosition = pos;
+            initMousePosition = Input.mousePosition;
         }
         else if (Input.GetMouseButtonDown(1) && !active)
         {
             blocked = true;
-            Obj.HandleClick(Obj.StandardType);
+            Obj.StartCoroutine(Obj.HandleClick(Obj.StandardType));
             MouseInfo.SetActive(false);
         }
 
-        if (active) handleMouseMenu();
+        if (active) HandleMouseMenu();
 
         if (active && Input.GetMouseButtonUp(0))
         {
-            Cursor.visible = true;
+            active = false;
+            if (selectedOption == 0) blocked = false;
+
+            //Cursor.visible = true;
+            image.enabled = false;
+            MouseInfo.SetActive(false);
+
+            switch (selectedOption)
+            {
+                case 0:
+                    break;
+                case 1:
+                    Obj.StartCoroutine(Obj.HandleClick(InteractionType.Interact));
+                    break;
+                case 2:
+                    Obj.StartCoroutine(Obj.HandleClick(InteractionType.TalkTo));
+                    break;
+                case 4:
+                    Obj.StartCoroutine(Obj.HandleClick(InteractionType.Take));
+                    break;
+                case 3:
+                    blocked = true;
+                    available = false;
+                    InventoryContainer.SetActive(true);
+                    inventory.Activate(Obj);
+                    break;
+            }
         }
-
-
     }
 
-    void handleMouseMenu()
+    void HandleMouseMenu()
     {
+        Vector2 dif = (Vector2)Input.mousePosition - initMousePosition;
+        if (dif.magnitude < middleThreshold)
+        {   
+            image.sprite = sprites[0];
+            selectedOption = 0;
+            return;
+        }
 
+        float x = Mathf.Sign(dif.x);
+        float y = Mathf.Sign(dif.y);
+        if (x == 0 && y == 0) return;
+
+        switch ((x, y))
+        {
+            case (-1, 1):
+                image.sprite = sprites[1]; // links oben
+                selectedOption = 1;
+                break;
+            case (1, 1):
+                image.sprite = sprites[2];
+                selectedOption = 2;
+                break;
+            case (1, -1):
+                image.sprite = sprites[3];
+                selectedOption = 3;
+                break;
+            case (-1, -1):
+                image.sprite = sprites[4];
+                selectedOption = 4;
+                break;
+        }
     }
 }
