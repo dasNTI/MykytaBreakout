@@ -47,7 +47,34 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler
         }
         else if (Input.GetMouseButtonDown(0))
         {
+            if (inventory.Obj.isDecor)
+            {
+                inventory.dt.DoCutscene(inventory.ItemDeclineVl);
+                inventory.Deactivate();
+                return;
+            }
 
+            bool found = false;
+            if (inventory.Obj.AcceptedItems.Length != 0)
+            {
+                for (int i = 0; i < inventory.Obj.AcceptedItems.Length; i++)
+                {
+                    if (inventory.Obj.AcceptedItems[i] == OwnItem)
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+            }
+            if (found)
+            {
+                inventory.Obj.HandleClick(InteractionType.UseItem, OwnItem);
+                inventory.dt.DoCutscene(inventory.Obj.ItemVl);
+            }else
+            {
+                inventory.dt.DoCutscene(inventory.ItemDeclineVl);
+            }
+            inventory.Deactivate();
         }else if (Input.GetMouseButtonDown(1)) { 
             HandleCombining();
             Select();

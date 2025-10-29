@@ -30,6 +30,7 @@ public class GameSave
     public bool Inventory_AtticHook = false;
     public bool Inventory_Shoelace = false;
 
+    public bool Hotelroom_ClosetFirstOpened = false;
     public bool Hotelroom_ClosetOpened = false;
     public bool Hotelroom_HookTaken = false;
     public bool Hotelroom_ShoelaceTaken = false;

@@ -73,7 +73,7 @@ public class MouseMenu : MonoBehaviour
         else if (Input.GetMouseButtonDown(1) && !active)
         {
             blocked = true;
-            Obj.StartCoroutine(Obj.HandleClick(Obj.StandardType));
+            Obj.HandleClick(Obj.StandardType);
             MouseInfo.SetActive(false);
         }
 
@@ -93,21 +93,21 @@ public class MouseMenu : MonoBehaviour
                 case 0:
                     break;
                 case 1:
-                    Obj.StartCoroutine(Obj.HandleClick(InteractionType.Interact));
+                    Obj.HandleClick(InteractionType.Interact);
                     break;
                 case 2:
-                    Obj.StartCoroutine(Obj.HandleClick(InteractionType.TalkTo));
+                    Obj.HandleClick(InteractionType.TalkTo);
                     break;
                 case 4:
-                    Obj.StartCoroutine(Obj.HandleClick(InteractionType.Take));
+                    Obj.HandleClick(InteractionType.Take);
                     break;
                 case 3:
                     blocked = true;
-                    available = false;
                     InventoryContainer.SetActive(true);
                     inventory.Activate(Obj);
                     break;
             }
+            available = false;
         }
     }
 

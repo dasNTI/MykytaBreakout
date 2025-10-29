@@ -14,6 +14,7 @@ public class WalkableArea : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (DialogueText.TalkingActive) return;
         if (connor.moving) return;
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         float yDif = -pc.bounds.center.y + mousePos.y + pc.bounds.extents.y;

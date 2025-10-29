@@ -13,12 +13,11 @@ public class DialogueText : MonoBehaviour
     public static Transform ConnorTransform;
     public static Connor connor;
     public static Vector3 JudePosition;
+    public static TalkingCharacter jude;
+    public static Vector3 SeanPosition;
+    public static TalkingCharacter sean;
+    public static bool TalkingActive = false;
     [SerializeField] private float ConnorOffset = 5;
-
-    void Start()
-    {
-        Debug.Log(ConnorTransform.position);
-    }
 
     // Update is called once per frame
     void Update()
@@ -26,22 +25,55 @@ public class DialogueText : MonoBehaviour
         
     }
 
-    public void DoCutscene()
+    public void DoCutscene(DialogueLine[] dialog)
+    {
+        MouseMenu.blocked = true;
+        TalkingActive = true;
+        StartCoroutine(cutscene(dialog));
+    }
+    IEnumerator cutscene(DialogueLine[] dialog)
     {
 
+        for (int i = 0; i < dialog.Length; i++)
+        {
+            DialogueLine line = dialog[i];
+            switch (line.character)
+            {
+                case Character.Connor:
+                    ConnorSays(line, false);
+                    break;
+                case Character.Sean:
+                    SeanSays(line, false);
+                    break;
+            }
+            yield return new WaitForSecondsRealtime(line.clip.length);
+        }
+        tmp.text = "";
+        MouseMenu.blocked = false;
+        TalkingActive = false;
     }
 
-    public void ConnorSays(DialogueLine dl)
+    public void ConnorSays(DialogueLine dl, bool endText = true)
     {
         audio.clip = dl.clip;
         tmp.color = ConnorColor;
         MoveTextTo(GetConnorPos());
-        StartCoroutine(ChangeText(new DialogueLine[] { dl }, dl.clip.length));
+        StartCoroutine(ChangeText(new DialogueLine[] { dl }, dl.clip.length, endText));
         connor.StartCoroutine(connor.Speak(dl.clip.length));
         audio.Play();
     }
 
-    IEnumerator ChangeText(DialogueLine[] parts, float minDuration)
+    public void SeanSays(DialogueLine dl, bool endText = true)
+    {
+        audio.clip = dl.clip;
+        tmp.color = SeanColor;
+        MoveTextTo(SeanPosition);
+        StartCoroutine(ChangeText(new DialogueLine[] { dl }, dl.clip.length, endText));
+        sean.StartCoroutine(sean.Speak(dl.clip.length));
+        audio.Play();
+    }
+
+    IEnumerator ChangeText(DialogueLine[] parts, float minDuration, bool endText)
     {
         for (int i = 0; i < parts.Length; i++)
         {
@@ -52,7 +84,7 @@ public class DialogueText : MonoBehaviour
         {
             yield return new WaitForSeconds(minDuration - parts[0].clip.length);
         }
-        tmp.text = "";
+        if (endText) tmp.text = "";
     }
 
     void MoveTextTo(Vector3 WorldPos)

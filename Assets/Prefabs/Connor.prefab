@@ -210,6 +210,7 @@ MonoBehaviour:
   - {fileID: 6905339834146709874, guid: f3bfd8e3b01d720448cfabde6e5452a0, type: 3}
   - {fileID: -5644889624927911716, guid: f3bfd8e3b01d720448cfabde6e5452a0, type: 3}
   moving: 0
+  speaking: 0
   speed: 5
   animationInterval: 0.25
 --- !u!1 &8077961924349440283

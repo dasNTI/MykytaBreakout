@@ -1819,10 +1819,13 @@ MonoBehaviour:
   CombinationFailVl:
     character: 0
     clip: {fileID: 8300000, guid: dcbcaae57c307894a90c1cdd897b7e4a, type: 3}
-    parts:
-    - text: Nee ich glaub, das wird nichts.
-      duration: 0
+    text: 
   CombinationSuccess: {fileID: 9187818521965522145}
+  dt: {fileID: 6404119885249003474}
+  ItemDeclineVl:
+  - character: 0
+    clip: {fileID: 8300000, guid: a6dd3c412e484344a98edf4018e45650, type: 3}
+    text: Lieber nicht.
 --- !u!82 &3328337062333635823
 AudioSource:
   m_ObjectHideFlags: 0

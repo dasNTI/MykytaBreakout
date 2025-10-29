@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Clickable : MonoBehaviour
@@ -10,6 +11,17 @@ public class Clickable : MonoBehaviour
     public bool active = true;
 
     [SerializeField] private MouseMenu mouseMenu;
+    [SerializeField] private DialogueLine[] InteractVl;
+    [SerializeField] private DialogueLine[] TakeVl;
+    [SerializeField] private DialogueLine[] TalkVl;
+    [SerializeField] public DialogueLine[] ItemVl;
+
+    [SerializeField] private InteractionType FurtherReactionInteractionType;
+    [SerializeField] public bool isDecor = false;
+    public Items[] AcceptedItems;
+    [SerializeField] private ClickableAction FurtherReaction;
+
+    private DialogueText dt;
 
     void Awake()
     {
@@ -19,6 +31,7 @@ public class Clickable : MonoBehaviour
     private void Start()
     {
         if (!mouseMenu) mouseMenu = GameObject.Find("MouseMenu").GetComponent<MouseMenu>();
+        dt = GameObject.Find("DialogueText").GetComponent<DialogueText>();
     }
         
     private void OnMouseEnter()
@@ -32,15 +45,30 @@ public class Clickable : MonoBehaviour
         mouseMenu.StopAvailable(objectId);
     }
 
-    public IEnumerator HandleClick(InteractionType type)
+    public void HandleClick(InteractionType type)
     {
-        Debug.Log("yeet");
-        yield return null;
+        switch (type)
+        {
+            case InteractionType.Interact:
+                dt.DoCutscene(InteractVl);
+                break;
+            case InteractionType.Take:
+                dt.DoCutscene(TakeVl);
+                break;
+            case InteractionType.TalkTo:
+                dt.DoCutscene(TalkVl);
+                break;
+        }
+        
+        if (!isDecor && type == FurtherReactionInteractionType)
+        {
+            FurtherReaction.DoAction(type);
+        }
     }
 
-    public IEnumerator HandleClick(InteractionType type, int itemId)
+    public void HandleClick(InteractionType type, Items itemId)
     {
-        yield return null;
+        
     }
 }
 
@@ -51,4 +79,9 @@ public enum InteractionType
     Take = 1,
     TalkTo = 2,
     UseItem = 3
+}
+
+public abstract class ClickableAction : MonoBehaviour
+{
+    public abstract void DoAction(InteractionType type, Items item = Items.Empty);
 }

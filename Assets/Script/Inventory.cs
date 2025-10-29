@@ -30,6 +30,8 @@ public class Inventory : MonoBehaviour
     [SerializeField] private AudioSource CombinationFail;
     [SerializeField] private DialogueLine CombinationFailVl;
     [SerializeField] private AudioSource CombinationSuccess;
+    public DialogueText dt;
+    public DialogueLine[] ItemDeclineVl;
 
     private void Awake()
     {
