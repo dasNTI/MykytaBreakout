@@ -263,7 +263,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5761652183468936248, guid: 62618f32e72a2db42bc33fd5a4cb2152, type: 3}
+  m_Sprite: {fileID: -3598220675514819543, guid: 04c307fa1295dbe45a568f933b84146e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -317,6 +317,9 @@ GameObject:
   - component: {fileID: 176727186}
   - component: {fileID: 176727185}
   - component: {fileID: 176727187}
+  - component: {fileID: 176727189}
+  - component: {fileID: 176727188}
+  - component: {fileID: 176727190}
   m_Layer: 0
   m_Name: Sean
   m_TagString: Untagged
@@ -421,6 +424,406 @@ MonoBehaviour:
   textPosition: {x: 1.62, y: -0.36, z: 0}
   isSean: 1
   isJude: 0
+--- !u!60 &176727188
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176727184}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.390575, y: 6.2499995}
+    newSize: {x: 4.390575, y: 6.2499995}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.13181135, y: -2.9286067}
+      - {x: 1.0249487, y: -3.0789425}
+      - {x: 0.9418231, y: -2.4658413}
+      - {x: 1.964831, y: -2.6596584}
+      - {x: 2.179147, y: -2.428698}
+      - {x: 1.5282981, y: -1.9964101}
+      - {x: 1.5932434, y: -1.8328506}
+      - {x: 1.511371, y: -1.3249563}
+      - {x: 1.2825174, y: -0.42394274}
+      - {x: 1.062073, y: 0.12626545}
+      - {x: 0.5039925, y: 0.29337057}
+      - {x: 0.4680373, y: 1.1103247}
+      - {x: 0.64462924, y: 1.1904922}
+      - {x: 0.6123582, y: 1.6429784}
+      - {x: 0.5363854, y: 1.779656}
+      - {x: 0.5201987, y: 1.9055077}
+      - {x: 0.31487226, y: 1.9847996}
+      - {x: 0.31817973, y: 2.1370084}
+      - {x: 0.2994043, y: 2.4280887}
+      - {x: 0.40887073, y: 2.5638175}
+      - {x: 0.30267027, y: 2.8005981}
+      - {x: 0.034198344, y: 3.042014}
+      - {x: -0.3842699, y: 3.0757966}
+      - {x: -0.7135005, y: 2.9164562}
+      - {x: -0.8663775, y: 2.6349838}
+      - {x: -0.904061, y: 2.3310854}
+      - {x: -0.66353226, y: 1.9623172}
+      - {x: -0.7909179, y: 1.921012}
+      - {x: -0.89473623, y: 1.8530378}
+      - {x: -0.9313229, y: 1.7578084}
+      - {x: -1.3096812, y: 1.5029929}
+      - {x: -1.5985255, y: 1.2236435}
+      - {x: -1.8661228, y: 0.7604248}
+      - {x: -2.1059341, y: 0.033140957}
+      - {x: -2.1673179, y: -0.3977296}
+      - {x: -2.025908, y: -0.6543083}
+      - {x: -0.29156673, y: -1.6834692}
+  m_UseDelaunayMesh: 0
+--- !u!114 &176727189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176727184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75efe116325b03f40969a71e69886f72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Clickable
+  StandardType: 2
+  ClickableName: Sean
+  active: 1
+  mouseMenu: {fileID: 0}
+  InteractVl:
+  - character: 0
+    clip: {fileID: 0}
+    text: 
+  TakeVl:
+  - character: 0
+    clip: {fileID: 0}
+    text: 
+  TalkVl: []
+  ItemVl: []
+  FurtherReactionInteractionType: 2
+  isDecor: 0
+  AcceptedItems: 
+  FurtherReaction: {fileID: 176727190}
+--- !u!114 &176727190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176727184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a21404e34f451c74587abadab58ca4c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueAction
+  ds: {fileID: 260330820}
+  dialogue:
+    lines:
+    - character: 0
+      clip: {fileID: 8300000, guid: 3cb478fd766fb63429a939eca7c82946, type: 3}
+      text: Jo, Sean.
+    - character: 2
+      clip: {fileID: 8300000, guid: 7d429595f3cef2c4eb0e8b02ec9b11f1, type: 3}
+      text: Huh?
+    options:
+    - text: Kannst du dich noch an vorhin erinnern?
+      rest:
+        lines:
+        - character: 0
+          clip: {fileID: 8300000, guid: 8b564116ec04b5245a41e2379ffad750, type: 3}
+          text: Kannst du dich noch an vorhin erinnern?
+        - character: 2
+          clip: {fileID: 8300000, guid: 1c9ba31738ba74c45bccd5e568b54c84, type: 3}
+          text: "Ich kann mich an gar nichts mehr erinnern. Ich wei\xDF nur, dass
+            ich gerade eben hier aufgewacht bin und dass du hier bist."
+        - character: 0
+          clip: {fileID: 8300000, guid: 1a556837abb88204ca0dfb4425ee33cb, type: 3}
+          text: Das ist ja nicht gerade viel.
+        - character: 2
+          clip: {fileID: 8300000, guid: cc481684370209d4baa999cad7fb5b4c, type: 3}
+          text: Wirklich?
+        options: []
+      doesSomething: 0
+    - text: Wie geht es dir?
+      rest:
+        lines:
+        - character: 0
+          clip: {fileID: 8300000, guid: 6526d5aedc21594468e34643b6bc9a44, type: 3}
+          text: Wie geht es dir?
+        - character: 2
+          clip: {fileID: 8300000, guid: de6036798103b124bb59c79f5eb3acb4, type: 3}
+          text: "Also abgesehen davor, dass ich nicht wei\xDF, wo ich bin und warum
+            ich mch hier befinde, geht mir erstaunlich gut. Ich h\xE4tte nur etwas
+            l\xE4nger schlafen k\xF6nnen, meinetwegen."
+        - character: 0
+          clip: {fileID: 8300000, guid: 24281acd454f72d4b84aae6333c9a4a5, type: 3}
+          text: Klingt doch gut.
+        options: []
+      doesSomething: 0
+    - text: Ich brauch was.
+      rest:
+        lines:
+        - character: 0
+          clip: {fileID: 8300000, guid: f3100270e87b12d41ba4a3d56978933e, type: 3}
+          text: Ich brauch was.
+        - character: 2
+          clip: {fileID: 8300000, guid: 2d9c64837d7b0e143ba3d1bb6391ea5d, type: 3}
+          text: Was brauchst du denn?
+        options:
+        - text: Ich brauche etwas, was mich aus den Socken haut
+          rest:
+            lines:
+            - character: 0
+              clip: {fileID: 8300000, guid: d4ad29930c1092e43bb6334b5b5045ab, type: 3}
+              text: Ich brauche etwas, was mich aus den Socken haut.
+            - character: 2
+              clip: {fileID: 8300000, guid: 321e2580268fc584bbf58c221c6ad0bc, type: 3}
+              text: Ist leider schon alle. Der Lehrer hat mir alles abgekauft.
+            options: []
+          doesSomething: 0
+        - text: "Wei\xDFt du, wo es hier rausgeht?"
+          rest:
+            lines:
+            - character: 0
+              clip: {fileID: 8300000, guid: af96a436790947448a07817a8cc00b41, type: 3}
+              text: "Wei\xDFt du, wo es hier rausgeht?"
+            - character: 2
+              clip: {fileID: 8300000, guid: 26bf3173453291342bf1a1bb1434e783, type: 3}
+              text: "Du, ich bin hier eben erst aufgewacht, kenn dich nicht, wei\xDF
+                nicht, warum ich hier bin. Ich frag mich wirklich, also du musst
+                ja wirklich ein Idiot sein, wie du denkst, dass ich darauf kommen
+                kann, wie man hier rauskommt."
+            - character: 0
+              clip: {fileID: 8300000, guid: 014fab8742d95dc4083676f96ed1fc3a, type: 3}
+              text: Okay, okay, schon gut, beruhig dich.
+            options: []
+          doesSomething: 0
+        - text: "Wei\xDFt du, wo ich was zu essen finden kann?"
+          rest:
+            lines:
+            - character: 0
+              clip: {fileID: 8300000, guid: 940c41a1f73b27f47abe85147a817658, type: 3}
+              text: "Wei\xDFt du, wo ich was zu essen finden kann?"
+            - character: 2
+              clip: {fileID: 8300000, guid: 8d16ca1fbbacce44195d7c53bffa4600, type: 3}
+              text: "\xC4hm, im K\xFChlschrank sollte noch was sein. Ah nee, der
+                ist leer."
+            options: []
+          doesSomething: 0
+        - text: Dich.
+          rest:
+            lines:
+            - character: 0
+              clip: {fileID: 8300000, guid: 47d5eb5d422311246b906f2501bcbd5b, type: 3}
+              text: Dich.
+            - character: 0
+              clip: {fileID: 8300000, guid: b5512dbf4fc82604cbf8c3e73dbad919, type: 3}
+              text: "Ich dachte schon, du w\xFCrdest nie fragen."
+            - character: 0
+              clip: {fileID: 8300000, guid: 5c8ff436da535754083e2d1bba6ae2b5, type: 3}
+              text: Wirlich?
+            - character: 0
+              clip: {fileID: 8300000, guid: 4f217ddbe145fc445bf18a5ab9d35a93, type: 3}
+              text: Nee sorry, kein Interesse.
+            options: []
+          doesSomething: 0
+        - text: Ich brauche etwas, um diese beiden Sachen miteinander zu verbinden.
+          rest:
+            lines:
+            - character: 0
+              clip: {fileID: 8300000, guid: 5723f473ea0463a4f9f1948f1b47abd2, type: 3}
+              text: Ich brauche etwas, um diese beiden Sachen miteinander zu verbinden.
+                Hast du da vielleicht etwas?
+            - character: 2
+              clip: {fileID: 8300000, guid: 0c61042189ec9604584efa46fb7d5322, type: 3}
+              text: "\xC4h nee, ich glaube nicht..."
+            - character: 2
+              clip: {fileID: 8300000, guid: 8d4274cb1cf62044ba8bab64583cb70a, type: 3}
+              text: "Oh ich hab hier doch noch was. Vielleicht kannst du die Sachen
+                mit diesem Schn\xFCrsenkel zusammenbinden."
+            - character: 0
+              clip: {fileID: 8300000, guid: 4fed3bbb197fa9042b67c75c3faec5ac, type: 3}
+              text: "Warum hast du die Schn\xFCrsenkel nicht in deinen Schuhen?"
+            - character: 2
+              clip: {fileID: 8300000, guid: 7e429f0e0b4d44a459db047120e3ed9d, type: 3}
+              text: Das Hotelpersonal klaut alles, was nicht niet- und nagelfest
+                ist.
+            - character: 0
+              clip: {fileID: 8300000, guid: e93c140b5e5fd5a43abc8408deb1bc46, type: 3}
+              text: "Warum wei\xDFt du sowas und behauptest, dass du nicht wei\xDFt,
+                wo wir uns befinden?"
+            - character: 2
+              clip: {fileID: 8300000, guid: 839e13cf4348a334fa3974ca420650bd, type: 3}
+              text: Was hab ich grad gesagt?
+            - character: 0
+              clip: {fileID: 8300000, guid: 6b1be2d61debfd345a4e402a9dbb65b2, type: 3}
+              text: Dass das Hotelpersonal... ach vergiss es.
+            options: []
+          doesSomething: 0
+      doesSomething: 0
+    - text: Willst du mit mir kommen?
+      rest:
+        lines:
+        - character: 0
+          clip: {fileID: 8300000, guid: 21409ab7b222d5f43b175e75d55a892e, type: 3}
+          text: Jo, willst du mit mir mitkommen?
+        - character: 2
+          clip: {fileID: 8300000, guid: f2e791770206ade4da3635ed4a71d302, type: 3}
+          text: Na, ich will lieber ausschlafen.
+        - character: 0
+          clip: {fileID: 8300000, guid: cfa95053a121e5648a63a3746f778b97, type: 3}
+          text: "Klingt auch nach einem Plan. Dann muss ich wohl oder \xFCbel allein
+            hier rauskommen."
+        options: []
+      doesSomething: 0
+    - text: Wir sind hier gefangen!
+      rest:
+        lines:
+        - character: 0
+          clip: {fileID: 8300000, guid: 7d0433e2f817c5d4cb20333c456a8ee8, type: 3}
+          text: Wir sind hier gefangen, wir werden hier beide draufgehen!
+        - character: 2
+          clip: {fileID: 8300000, guid: fbd7fa139342fbd47b31093547157362, type: 3}
+          text: Oh Gott, warum passiert das alles hier?!
+        options:
+        - text: Hey beruhig dich, man kann hier noch rauskommen!
+          rest:
+            lines:
+            - character: 0
+              clip: {fileID: 8300000, guid: 53d1d07ecbda81c4dbd536a34e956c22, type: 3}
+              text: Hey beruhig dich, man kann hier noch rauskommen!
+            - character: 2
+              clip: {fileID: 8300000, guid: 510da06dc8d5f7942a4b71c0f34a2f02, type: 3}
+              text: Mann, warum bist du so gemein? Ich hab dir das wirklich geglaubt.
+            options: []
+          doesSomething: 0
+        - text: "GOTT STRAFT DICH F\xDCR DEINE S\xDCNDEN UND ICH BIN SEIN SCHL\xC4CHTER!"
+          rest:
+            lines:
+            - character: 0
+              clip: {fileID: 8300000, guid: bb5b9709a0df4f74d95435429a9a1ba2, type: 3}
+              text: "GOTT STRAFT DICH F\xDCR DEINE S\xDCNDEN UND ICH BIN SEIN SCHL\xC4CHTER!"
+            - character: 2
+              clip: {fileID: 8300000, guid: d5fbfc8019e9a1a46b3c16facd82fc5c, type: 3}
+              text: "Oh Gott, was habe ich nur getan??? Ich wei\xDF ja nicht einmal,
+                wer ich bin."
+            - character: 0
+              clip: {fileID: 8300000, guid: 1d53e7cb20dca7b4897a265144a1f3f6, type: 3}
+              text: HAHAH!
+            options: []
+          doesSomething: 0
+        - text: Ich brauch doch nichts.
+          rest:
+            lines:
+            - character: 0
+              clip: {fileID: 8300000, guid: 549c1cd7f3822cd4e8a19caff17ccee5, type: 3}
+              text: Ich brauch doch nichts.
+            - character: 2
+              clip: {fileID: 8300000, guid: edc85d1ccb06ff349b957d7243049ba0, type: 3}
+              text: Ok.
+            options: []
+          doesSomething: 0
+      doesSomething: 0
+    - text: "K\xF6nnen wir reden?"
+      rest:
+        lines:
+        - character: 0
+          clip: {fileID: 8300000, guid: 49adbf5e7fc541044801d95350adadd2, type: 3}
+          text: "K\xF6nnen wir reden?"
+        - character: 2
+          clip: {fileID: 8300000, guid: 6ee75d35ed5d50848bb9449be582aa86, type: 3}
+          text: "Wor\xFCber m\xF6chtest du denn reden?"
+        options:
+        - text: Kannst du dich wirklich an nichts mehr erinnern?
+          rest:
+            lines:
+            - character: 0
+              clip: {fileID: 8300000, guid: 6e32c57664b650d498549a7f06ef2c37, type: 3}
+              text: Kannst du dich wirklich an nichts mehr erinnern?
+            - character: 2
+              clip: {fileID: 8300000, guid: feb953ba7b454b5488a1a6efd027940e, type: 3}
+              text: "Iiiich wei\xDF, dass ich nichts wei\xDF."
+            - character: 0
+              clip: {fileID: 8300000, guid: 048a873e8d92b26478605e942ee9b1ae, type: 3}
+              text: Das ist ein wirklich passendes Zitat. Du erinnerst dich also
+                noch an Sokrates?
+            - character: 2
+              clip: {fileID: 8300000, guid: ee315e791de1af146807c1e9ef45c3dc, type: 3}
+              text: Wer ist denn das?
+            options: []
+          doesSomething: 0
+        - text: "Was h\xE4ltst du von diesem Zimmer?"
+          rest:
+            lines:
+            - character: 0
+              clip: {fileID: 8300000, guid: 8091e13dda1e84349ae51ee6e37dd915, type: 3}
+              text: "Was h\xE4ltst du von diesem Zimmer?"
+            - character: 2
+              clip: {fileID: 8300000, guid: 5769f51fe6c167b4fac6658d57f457ce, type: 3}
+              text: Es ist eng.
+            - character: 0
+              clip: {fileID: 8300000, guid: d7c5d64f3d1dda34ca1d5f79ea82d5ac, type: 3}
+              text: Und sonst noch?
+            - character: 2
+              clip: {fileID: 8300000, guid: dcb27883de738034fad4ae1fac5dd8a5, type: 3}
+              text: "Die W\xE4nde sind h\xE4sslich."
+            - character: 0
+              clip: {fileID: 8300000, guid: b24102fbcab11cf45a29be1db4ba94e1, type: 3}
+              text: Und sonst noch?
+            - character: 2
+              clip: {fileID: 8300000, guid: f503c6da5cf393540845dabd9ccb9969, type: 3}
+              text: Es ist eng.
+            - character: 0
+              clip: {fileID: 8300000, guid: c52d5b7c5f78f124280fc3423e879aa4, type: 3}
+              text: 10/10 Bewertung.
+            options: []
+          doesSomething: 0
+        - text: Doch nichts.
+          rest:
+            lines:
+            - character: 0
+              clip: {fileID: 8300000, guid: 0ebf6ef80de3a714c9162d8a4d8ab4aa, type: 3}
+              text: Doch nichts.
+            - character: 2
+              clip: {fileID: 8300000, guid: 4b240c1dcded69847a31190642d2e417, type: 3}
+              text: Meinetwegen.
+            options: []
+          doesSomething: 0
+      doesSomething: 0
 --- !u!1001 &260330819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -429,6 +832,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 112022792202014941, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 112022792202014941, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 112022792202014941, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 112022792202014941, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 330476671567282918, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 330476671567282918, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 330476671567282918, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 330476671567282918, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 330476671567282918, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 461322561789937841, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -445,6 +884,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 938630325027144882, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 938630325027144882, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 938630325027144882, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 938630325027144882, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 938630325027144882, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1302020329553964182, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -6.302498
@@ -452,6 +911,34 @@ PrefabInstance:
     - target: {fileID: 1302020329553964182, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -4.197502
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055526154667682675, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055526154667682675, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055526154667682675, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055526154667682675, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055526154667682675, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055526154667682675, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055526154667682675, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2350300404503027197, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
       propertyPath: m_Name
@@ -485,6 +972,70 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 4.197502
       objectReference: {fileID: 0}
+    - target: {fileID: 2554681883556383529, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554681883556383529, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554681883556383529, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554681883556383529, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554681883556383529, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751983524324776500, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751983524324776500, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751983524324776500, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751983524324776500, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115989867655855359, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115989867655855359, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115989867655855359, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115989867655855359, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115989867655855359, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115989867655855359, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3272108846779445712, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -39.73004
+      objectReference: {fileID: 0}
     - target: {fileID: 3601147380617850846, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -508,6 +1059,26 @@ PrefabInstance:
     - target: {fileID: 3769053072015001678, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -4.197502
+      objectReference: {fileID: 0}
+    - target: {fileID: 4300234151809034356, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AspectRatio
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489450640291363925, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489450640291363925, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489450640291363925, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489450640291363925, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5611326989888604772, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
       propertyPath: m_AnchorMax.y
@@ -645,6 +1216,46 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6275189437706185671, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275189437706185671, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275189437706185671, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275189437706185671, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275189437706185671, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458722470927300715, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458722470927300715, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458722470927300715, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6458722470927300715, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6671398840032756661, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6796074054238323030, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -714,6 +1325,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+--- !u!114 &260330820 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6617945097750127215, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+  m_PrefabInstance: {fileID: 260330819}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd6df8c2e9283645b9bc0099dbf6ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem
 --- !u!1 &287621203
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,7 +1346,9 @@ GameObject:
   m_Component:
   - component: {fileID: 287621206}
   - component: {fileID: 287621205}
+  - component: {fileID: 287621207}
   - component: {fileID: 287621204}
+  - component: {fileID: 287621208}
   m_Layer: 0
   m_Name: Haken
   m_TagString: Untagged
@@ -778,10 +1402,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -2.9519036, y: 0.6510496}
-      - {x: -2.4079647, y: 0.6662438}
-      - {x: -2.4541614, y: 0.19693983}
-      - {x: -2.9132195, y: 0.13575226}
+    - - {x: -2.931714, y: 0.5137607}
+      - {x: -2.4120026, y: 0.6097132}
+      - {x: -2.4029214, y: 0.49489146}
+      - {x: -2.5026164, y: 0.46747935}
+      - {x: -2.49684, y: 0.15338612}
+      - {x: -2.9051435, y: 0.08729733}
   m_UseDelaunayMesh: 0
 --- !u!114 &287621205
 MonoBehaviour:
@@ -803,10 +1429,10 @@ MonoBehaviour:
   TakeVl: []
   TalkVl: []
   ItemVl: []
-  FurtherReactionInteractionType: 0
+  FurtherReactionInteractionType: 1
   isDecor: 0
   AcceptedItems: 
-  FurtherReaction: {fileID: 0}
+  FurtherReaction: {fileID: 287621207}
 --- !u!4 &287621206
 Transform:
   m_ObjectHideFlags: 0
@@ -816,12 +1442,126 @@ Transform:
   m_GameObject: {fileID: 287621203}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.86, y: 1.26, z: 0}
+  m_LocalPosition: {x: 2.86, y: 1.26, z: -0.18}
   m_LocalScale: {x: 1.6451, y: 1.6451, z: 1.6451}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &287621207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287621203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 537a4ce75f459924b869bead36cb5452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Hanger
+  parent: {fileID: 287621205}
+  inventory: {fileID: 2059965951}
+  bgSprite: {fileID: -5436466034744143155, guid: f4fd6bef2f7f1b644a85833c8189c8f1, type: 3}
+  bgSr: {fileID: 153475254}
+  audio: {fileID: 287621208}
+--- !u!82 &287621208
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287621203}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &386392530 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2348868688424323439, guid: ab9362e7a19ada346b8c3eabff30515a, type: 3}
@@ -1080,7 +1820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75efe116325b03f40969a71e69886f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemHover
-  StandardType: 1
+  StandardType: 0
   ClickableName: Bild
   active: 1
   mouseMenu: {fileID: 0}
@@ -1510,6 +2250,148 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &967934412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 967934415}
+  - component: {fileID: 967934414}
+  - component: {fileID: 967934413}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Music
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &967934413
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967934412}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 6cc0d56b3911c92449a5c3db98d2dd24, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.406
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &967934414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967934412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae932339f03b0545875523f5bf39356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicSystem
+--- !u!4 &967934415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967934412}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.32088, y: -1.78418, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1058512869
 GameObject:
   m_ObjectHideFlags: 0
@@ -1795,6 +2677,248 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1444358547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1444358552}
+  - component: {fileID: 1444358551}
+  - component: {fileID: 1444358550}
+  - component: {fileID: 1444358549}
+  - component: {fileID: 1444358548}
+  m_Layer: 0
+  m_Name: SchrankOffen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1444358548
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444358547}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 3b71e09533c0d7c47b6e2869bf41a763, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!60 &1444358549
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444358547}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -2.1027393, y: 1.0144308}
+      - {x: -1.7143344, y: 0.67036104}
+      - {x: -1.752822, y: -1.5216713}
+      - {x: -2.0946558, y: -1.2527461}
+  m_UseDelaunayMesh: 0
+--- !u!114 &1444358550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444358547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b55437f1b22b111459b29bf7ab794e4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Closet
+  parent: {fileID: 1444358551}
+  RepresentsClosedDoor: 0
+  ChangedBg: {fileID: 5761652183468936248, guid: 62618f32e72a2db42bc33fd5a4cb2152, type: 3}
+  AltBg: {fileID: 0}
+  bgSr: {fileID: 153475254}
+  OtherClosetClickable: {fileID: 1701691601}
+  HookClickable: {fileID: 287621205}
+  audio: {fileID: 1444358548}
+  OpeningLine1:
+    character: 0
+    clip: {fileID: 8300000, guid: 7926d1d4fa88b1f459c6722a3f299ed1, type: 3}
+    text: Mal sehen, was da drin ist.
+  OpeningLine2:
+    character: 0
+    clip: {fileID: 8300000, guid: cab6290a3ae06f74099c77b8d1ff971a, type: 3}
+    text: "Oh, ein Kleiderb\xFCgel."
+  dt: {fileID: 1907607369}
+--- !u!114 &1444358551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444358547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75efe116325b03f40969a71e69886f72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemHover
+  StandardType: 0
+  ClickableName: Schrank
+  active: 0
+  mouseMenu: {fileID: 0}
+  InteractVl: []
+  TakeVl:
+  - character: 0
+    clip: {fileID: 8300000, guid: c7549d98fbf80644bbb37ba9d10b5937, type: 3}
+    text: Bin ich etwa Hulk?
+  TalkVl:
+  - character: 0
+    clip: {fileID: 8300000, guid: b1e385677d2102c40b3ce9372a58ba13, type: 3}
+    text: Ich hoffe, dass sich dort nachts keine Gestalten befinden.
+  ItemVl: []
+  FurtherReactionInteractionType: 0
+  isDecor: 0
+  AcceptedItems: 
+  FurtherReaction: {fileID: 1444358550}
+--- !u!4 &1444358552
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444358547}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.86, y: 1.26, z: 0}
+  m_LocalScale: {x: 1.6451, y: 1.6451, z: 1.6451}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1473456422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2005,8 +3129,14 @@ MonoBehaviour:
   active: 1
   mouseMenu: {fileID: 0}
   InteractVl: []
-  TakeVl: []
-  TalkVl: []
+  TakeVl:
+  - character: 0
+    clip: {fileID: 8300000, guid: c7549d98fbf80644bbb37ba9d10b5937, type: 3}
+    text: Bin ich etwa Hulk?
+  TalkVl:
+  - character: 0
+    clip: {fileID: 8300000, guid: b1e385677d2102c40b3ce9372a58ba13, type: 3}
+    text: Ich hoffe, dass sich dort nachts keine Gestalten befinden.
   ItemVl: []
   FurtherReactionInteractionType: 0
   isDecor: 0
@@ -2139,8 +3269,10 @@ MonoBehaviour:
   parent: {fileID: 1701691601}
   RepresentsClosedDoor: 1
   ChangedBg: {fileID: -3598220675514819543, guid: 04c307fa1295dbe45a568f933b84146e, type: 3}
+  AltBg: {fileID: -5436466034744143155, guid: f4fd6bef2f7f1b644a85833c8189c8f1, type: 3}
   bgSr: {fileID: 153475254}
-  OtherClosetClickable: {fileID: 0}
+  OtherClosetClickable: {fileID: 1444358551}
+  HookClickable: {fileID: 287621205}
   audio: {fileID: 1701691603}
   OpeningLine1:
     character: 0
@@ -2252,114 +3384,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab57188402e34be4ea94b087ddd7a7ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueText
---- !u!1 &2061351820
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2061351823}
-  - component: {fileID: 2061351822}
-  - component: {fileID: 2061351821}
-  m_Layer: 0
-  m_Name: SchrankOffen
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!60 &2061351821
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061351820}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -2.1027393, y: 1.0144308}
-      - {x: -1.7079779, y: 0.65094364}
-      - {x: -1.7618246, y: -1.5396395}
-      - {x: -2.0946558, y: -1.2527461}
-  m_UseDelaunayMesh: 0
---- !u!114 &2061351822
+--- !u!114 &2059965951 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7036269607134749205, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+  m_PrefabInstance: {fileID: 260330819}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061351820}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75efe116325b03f40969a71e69886f72, type: 3}
+  m_Script: {fileID: 11500000, guid: 92559f3b7e3197144a681b8479c89760, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemHover
-  StandardType: 0
-  ClickableName: Schrank
-  active: 0
-  mouseMenu: {fileID: 0}
-  InteractVl: []
-  TakeVl: []
-  TalkVl: []
-  ItemVl: []
-  FurtherReactionInteractionType: 0
-  isDecor: 0
-  AcceptedItems: 
-  FurtherReaction: {fileID: 0}
---- !u!4 &2061351823
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061351820}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.86, y: 1.26, z: 0}
-  m_LocalScale: {x: 1.6451, y: 1.6451, z: 1.6451}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::Inventory
 --- !u!1001 &3133237247138749886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2451,7 +3486,7 @@ SceneRoots:
   - {fileID: 260330819}
   - {fileID: 465491939}
   - {fileID: 1701691602}
-  - {fileID: 2061351823}
+  - {fileID: 1444358552}
   - {fileID: 287621206}
   - {fileID: 1473456426}
   - {fileID: 757085510}
@@ -2461,3 +3496,4 @@ SceneRoots:
   - {fileID: 1796863104}
   - {fileID: 1113653766}
   - {fileID: 176727186}
+  - {fileID: 967934415}

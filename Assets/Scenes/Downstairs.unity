@@ -208,6 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 153475255}
   - component: {fileID: 153475254}
+  - component: {fileID: 153475256}
   m_Layer: 0
   m_Name: bg
   m_TagString: Untagged
@@ -288,6 +289,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &153475256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153475253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4bc330b8aeedb438ae70fc247db10a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneSetup_Reception
+  bgSr: {fileID: 153475254}
+  bgSprites:
+  - {fileID: -6472686771767841840, guid: fcc7e0c4ad7f44b47900c44e8e6da609, type: 3}
+  - {fileID: -3010732426915388480, guid: 93aef692a219d514080b6a8b205a8b9b, type: 3}
+  MopClickable: {fileID: 757085511}
 --- !u!114 &386392530 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2348868688424323439, guid: ab9362e7a19ada346b8c3eabff30515a, type: 3}
@@ -403,6 +421,36 @@ MonoBehaviour:
   ClickableName: Spiegel
   active: 1
   mouseMenu: {fileID: 0}
+  InteractVl:
+  - character: 0
+    clip: {fileID: 8300000, guid: 18ed656e39ea8d54586599c4f2ea2296, type: 3}
+    text: Das bin ja ich!
+  TakeVl:
+  - character: 0
+    clip: {fileID: 8300000, guid: 55f61e12098838f44801a745d90dcc29, type: 3}
+    text: Ich brauche ihn nicht
+  TalkVl:
+  - character: 0
+    clip: {fileID: 8300000, guid: 64467cc4ff747b342b65de075990923b, type: 3}
+    text: Wer bist du denn?
+  - character: 0
+    clip: {fileID: 8300000, guid: 6ad93b3954983374e9a82e4cbf29f361, type: 3}
+    text: Ich bin du.
+  - character: 0
+    clip: {fileID: 8300000, guid: 364180a9821537c4294cf7a03bb5d07a, type: 3}
+    text: Nein, ich bin du.
+  - character: 0
+    clip: {fileID: 8300000, guid: 480767a8ae6520742b7e583156ccbc25, type: 3}
+    text: Nein, ich bin du!
+  - character: 0
+    clip: {fileID: 8300000, guid: dcdd148aa306a7349ade3edea13ba1ad, type: 3}
+    text: Vielleicht legen wir beide diesen Konflikt bei und sagen, dass wir eins
+      sind.
+  ItemVl: []
+  FurtherReactionInteractionType: 0
+  isDecor: 0
+  AcceptedItems: 
+  FurtherReaction: {fileID: 0}
 --- !u!1 &465491937
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,7 +463,7 @@ GameObject:
   - component: {fileID: 465491941}
   - component: {fileID: 465491942}
   m_Layer: 0
-  m_Name: Luke
+  m_Name: "T\xFCr"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -452,6 +500,14 @@ MonoBehaviour:
   ClickableName: "T\xFCr nach drau\xDFen"
   active: 1
   mouseMenu: {fileID: 0}
+  InteractVl: []
+  TakeVl: []
+  TalkVl: []
+  ItemVl: []
+  FurtherReactionInteractionType: 0
+  isDecor: 0
+  AcceptedItems: 
+  FurtherReaction: {fileID: 0}
 --- !u!60 &465491942
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -951,6 +1007,7 @@ GameObject:
   - component: {fileID: 757085510}
   - component: {fileID: 757085508}
   - component: {fileID: 757085511}
+  - component: {fileID: 757085512}
   m_Layer: 0
   m_Name: Mop
   m_TagString: Untagged
@@ -1044,6 +1101,39 @@ MonoBehaviour:
   ClickableName: Wischmop
   active: 1
   mouseMenu: {fileID: 0}
+  InteractVl:
+  - character: 0
+    clip: {fileID: 8300000, guid: a0b0389ff4e6e8140ae52728c6eabfed, type: 3}
+    text: "Vielleicht kann er mir n\xFCtzlich sein."
+  TakeVl:
+  - character: 0
+    clip: {fileID: 8300000, guid: b1c9493a96f2c2742a28f87726fc8fc8, type: 3}
+    text: Dich nehme ich mit.
+  TalkVl:
+  - character: 0
+    clip: {fileID: 8300000, guid: e90ebd316cca7944db7ebcdfed29498b, type: 3}
+    text: Du bist ja ganz zerzaust.
+  ItemVl: []
+  FurtherReactionInteractionType: 1
+  isDecor: 0
+  AcceptedItems: 
+  FurtherReaction: {fileID: 757085512}
+--- !u!114 &757085512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757085507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524726340c458d14eb050da17f521fb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Mop
+  parent: {fileID: 757085511}
+  bgSprite: {fileID: -3010732426915388480, guid: 93aef692a219d514080b6a8b205a8b9b, type: 3}
+  bgSr: {fileID: 153475254}
+  inventory: {fileID: 1097570657}
 --- !u!1 &1030679211
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,6 +1219,23 @@ MonoBehaviour:
   ClickableName: Kommode
   active: 1
   mouseMenu: {fileID: 0}
+  InteractVl:
+  - character: 0
+    clip: {fileID: 8300000, guid: 707e5f88d1cbbd5499ecd8405b73c91e, type: 3}
+    text: Scheint wohl nichts drin zu sein.
+  TakeVl:
+  - character: 0
+    clip: {fileID: 8300000, guid: 85995f759f391a740abf17fa22e8c13f, type: 3}
+    text: Sie ist zu schwer.
+  TalkVl:
+  - character: 0
+    clip: {fileID: 8300000, guid: c1b39135330580d42ad832e64e187caa, type: 3}
+    text: "Seid ihr da drinnen, M\xE4use?"
+  ItemVl: []
+  FurtherReactionInteractionType: 0
+  isDecor: 0
+  AcceptedItems: 
+  FurtherReaction: {fileID: 0}
 --- !u!4 &1030679214
 Transform:
   m_ObjectHideFlags: 0
@@ -1240,11 +1347,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6671398840032756661, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+--- !u!114 &1097570657 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7036269607134749205, guid: 6f807341bef0fe742a3d49221f9cc0da, type: 3}
+  m_PrefabInstance: {fileID: 1097570656}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92559f3b7e3197144a681b8479c89760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Inventory
 --- !u!1 &1113653763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,6 +1567,23 @@ MonoBehaviour:
   ClickableName: Pflanze
   active: 1
   mouseMenu: {fileID: 0}
+  InteractVl:
+  - character: 0
+    clip: {fileID: 8300000, guid: a68bcf1e35bea0448918d85d1479f474, type: 3}
+    text: Kannst du mir helfen, hier rauszukommen?
+  TakeVl:
+  - character: 0
+    clip: {fileID: 8300000, guid: 3e260410a50fb84488f1d7615b2034dc, type: 3}
+    text: Auf diesem Platz sieht sie besser aus.
+  TalkVl:
+  - character: 0
+    clip: {fileID: 8300000, guid: 65f45c08b364e1c46a42d69aa414b8d3, type: 3}
+    text: Eines Tages wirst du hier rauswachsen.
+  ItemVl: []
+  FurtherReactionInteractionType: 0
+  isDecor: 0
+  AcceptedItems: 
+  FurtherReaction: {fileID: 0}
 --- !u!4 &1234424451
 Transform:
   m_ObjectHideFlags: 0

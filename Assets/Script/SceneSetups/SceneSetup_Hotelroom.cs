@@ -6,7 +6,7 @@ public class SceneSetup_Hotelroom : MonoBehaviour
     [SerializeField] private Sprite[] bgSprites;
     void Start()
     {
-        ProgressManager.New();
+        if (ProgressManager.State == null) ProgressManager.New();
 
         if (ProgressManager.State.Hotelroom_ClosetOpened)
         {

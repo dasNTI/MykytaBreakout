@@ -25,11 +25,12 @@ public class Inventory : MonoBehaviour
    
     [SerializeField] private ItemInformation[] itemInformation;
     [SerializeField] private ItemCombination[] AllowedCombinations;
-    public static Items[] StaticSlotItems;
+    public static Items[] StaticSlotItems = null;
 
     [SerializeField] private AudioSource CombinationFail;
     [SerializeField] private DialogueLine CombinationFailVl;
     [SerializeField] private AudioSource CombinationSuccess;
+    [SerializeField] private AudioSource ReceiveItemAudio;
     public DialogueText dt;
     public DialogueLine[] ItemDeclineVl;
 
@@ -84,7 +85,16 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(Items item)
     {
-        
+        for (int i = 0 ; i < slots.Length; i++)
+        {
+            if (slots[i].OwnItem == Items.Empty)
+            {
+                slots[i].OwnItem = item;
+                StaticSlotItems[i] = item;
+                break;
+            }
+        }
+        AssignImages();
     }
 
     public void AdjustSelectedItemInformation(Items item)

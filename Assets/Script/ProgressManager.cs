@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ProgressManager : MonoBehaviour
 {
-    public static GameSave State;
+    public static GameSave State = null;
     public static string SaveName = "Save";
     
     public static void Load()
@@ -36,6 +36,8 @@ public class GameSave
     public bool Hotelroom_ShoelaceTaken = false;
 
     public bool Hallway_AtticOpened = false;
+
+    public bool Reception_MopTaken = false;
 
     public bool Attic_LadderTaken = false;
 }

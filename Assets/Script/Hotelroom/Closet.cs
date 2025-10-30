@@ -1,14 +1,15 @@
 using System.Collections;
 using UnityEngine;
 
-[CreateAssetMenu]
 public class Closet : ClickableAction
 {
     [SerializeField] private Clickable parent;
     [SerializeField] private bool RepresentsClosedDoor = true;
     [SerializeField] private Sprite ChangedBg;
+    [SerializeField] private Sprite AltBg;
     [SerializeField] private SpriteRenderer bgSr;
     [SerializeField] private Clickable OtherClosetClickable;
+    [SerializeField] private Clickable HookClickable;
     [SerializeField] private AudioSource audio;
     [SerializeField] private DialogueLine OpeningLine1;
     [SerializeField] private DialogueLine OpeningLine2;
@@ -16,12 +17,36 @@ public class Closet : ClickableAction
 
     public override void DoAction(InteractionType type, Items _ = Items.Empty)
     {
-        if (!ProgressManager.State.Hotelroom_ClosetFirstOpened && !ProgressManager.State.Hotelroom_ClosetOpened && RepresentsClosedDoor)
+        if (RepresentsClosedDoor)
         {
-            parent.StartCoroutine(OpeningCloset());
-        }else if (ProgressManager.State.Hotelroom_ClosetOpened)
+            if (!ProgressManager.State.Hotelroom_ClosetFirstOpened && !ProgressManager.State.Hotelroom_ClosetOpened)
+            {
+                parent.StartCoroutine(OpeningCloset());
+            }
+            else if (!ProgressManager.State.Hotelroom_ClosetOpened)
+            {
+                ProgressManager.State.Hotelroom_ClosetOpened = true;
+                audio.Play();
+                if (!ProgressManager.State.Hotelroom_HookTaken)
+                {
+                    bgSr.sprite = ChangedBg;
+                    HookClickable.active = true;
+                }else
+                {
+                    bgSr.sprite = AltBg;
+                    HookClickable.active = false;
+                }
+                parent.active = false;
+                OtherClosetClickable.active = true;
+            }
+        }else
         {
-
+            ProgressManager.State.Hotelroom_ClosetOpened = false;
+            bgSr.sprite = ChangedBg;
+            HookClickable.active = false;
+            OtherClosetClickable.active = true;
+            parent.active = false;
+            audio.Play();
         }
     }
 
@@ -39,5 +64,7 @@ public class Closet : ClickableAction
         yield return new WaitForSecondsRealtime(OpeningLine2.clip.length);
         MouseMenu.blocked = false;
         parent.active = false;
+        OtherClosetClickable.active = true;
+        HookClickable.active = true;
     }
 }

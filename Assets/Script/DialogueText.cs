@@ -31,7 +31,13 @@ public class DialogueText : MonoBehaviour
         TalkingActive = true;
         StartCoroutine(cutscene(dialog));
     }
-    IEnumerator cutscene(DialogueLine[] dialog)
+    public void DoCutscene(DialogueLine[] dialog, System.Action after)
+    {
+        MouseMenu.blocked = true;
+        TalkingActive = true;
+        StartCoroutine(cutscene(dialog, after));
+    }
+    IEnumerator cutscene(DialogueLine[] dialog, System.Action after = null)
     {
 
         for (int i = 0; i < dialog.Length; i++)
@@ -51,6 +57,7 @@ public class DialogueText : MonoBehaviour
         tmp.text = "";
         MouseMenu.blocked = false;
         TalkingActive = false;
+        if (after != null) after();
     }
 
     public void ConnorSays(DialogueLine dl, bool endText = true)
@@ -105,7 +112,8 @@ public enum Character
     Connor = 0,
     Jude = 1,
     Sean = 2,
-    Zimmernachbar = 3
+    Zimmernachbar = 3,
+    StimmeAusmOff = 4
 }
 
 [System.Serializable]
